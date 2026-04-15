@@ -3,7 +3,7 @@
    ============================================================ */
 
 // ─── API BASE URL ───
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://shagun-backend-production.up.railway.app/api';
 
 /* ────────────────────────────────────────
    1. LOADER
