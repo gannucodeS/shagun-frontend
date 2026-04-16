@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — SHAGUN Wedding Planners</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://i.postimg.cc/v8khPQmR/f3no-BG.png">
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div id="loader">
+    <div class="loader-mandala"></div>
+    <div class="loader-logo">Shagun</div>
+    <div class="loader-subtitle">Preparing your booking...</div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-main">Shagun</span>
+      <span class="nav-logo-sub">Wedding Planners · Ajmer</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="login.html" class="nav-login-btn">Login</a>
+    </div>
+    <div class="nav-actions">
+      <button id="dark-toggle">🌙</button>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="packages.html">Packages</a>
+    <a href="login.html">Login</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" style="height:35vh;min-height:280px;">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-sub">✦ Secure Booking ✦</p>
+      <h1 class="page-hero-title">Complete Your Booking</h1>
+    </div>
+  </div>
+
+  <!-- CHECKOUT SECTION -->
+  <section class="checkout-section">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <div class="fade-in" style="display:flex;gap:0.5rem;align-items:center;margin-bottom:2.5rem;font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);">
+        <a href="packages.html" style="color:var(--gold);">Packages</a>
+        <span>›</span>
+        <span style="color:var(--text-dark);">Checkout</span>
+      </div>
+
+      <div class="checkout-grid">
+
+        <!-- Selected Package Summary -->
+        <div class="selected-package-card fade-in-left">
+          <h3>Your Selected Package</h3>
+          <div style="width:50px;height:1px;background:var(--gold);margin-bottom:1.5rem;"></div>
+          <div class="selected-pkg-name" id="pkg-name">Gold Package</div>
+          <div class="selected-pkg-price" id="pkg-price">₹2,50,000</div>
+          <p style="font-family:var(--font-body);font-size:0.9rem;color:rgba(245,230,200,0.5);font-style:italic;">All taxes included</p>
+          <div class="selected-pkg-features">
+            <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Package Includes</p>
+            <ul id="pkg-features">
+              <li>Premium Venue Sourcing</li>
+              <li>Luxury Mandap & Décor</li>
+              <li>Catering (300 guests)</li>
+              <li>Photography + Videography</li>
+              <li>Bridal Makeup & Styling</li>
+            </ul>
+          </div>
+          <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(200,150,42,0.2);">
+            <a href="packages.html" style="font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,230,200,0.4);transition:var(--transition);"
+               onmouseover="this.style.color='var(--gold-light)'" onmouseout="this.style.color='rgba(245,230,200,0.4)'">
+              ← Change Package
+            </a>
+          </div>
+        </div>
+
+        <!-- Checkout Form -->
+        <div class="checkout-form-wrapper fade-in-right">
+          <h2>Event Details & Booking</h2>
+          <p style="font-family:var(--font-body);font-size:1rem;color:var(--text-light);font-style:italic;margin-bottom:2rem;">Please fill in the details below and we'll confirm your booking within 24 hours.</p>
+
+          <form id="checkout-form">
+
+            <div class="form-section-title">Personal Information</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-input" name="fullName" required placeholder="Priya Sharma" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-input" name="email" required placeholder="priya@example.com" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" class="form-input" name="phone" required placeholder="+91 98290 00000" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Alternate Phone</label>
+                <input type="tel" class="form-input" name="altPhone" placeholder="+91 94600 00000" />
+              </div>
+            </div>
+
+            <div class="form-section-title">Event Information</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Event Type *</label>
+                <select class="form-select form-input" name="eventType" required>
+                  <option value="">Select Event Type</option>
+                  <option>Wedding (Full)</option>
+                  <option>Haldi Ceremony</option>
+                  <option>Mehendi Night</option>
+                  <option>Reception</option>
+                  <option>Engagement</option>
+                  <option>Sangeet</option>
+                  <option>Corporate Event</option>
+                  <option>Custom</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Event Date *</label>
+                <input type="date" class="form-input" name="eventDate" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Venue / Location *</label>
+                <input type="text" class="form-input" name="location" required placeholder="Ajmer, Rajasthan" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Expected Guests *</label>
+                <select class="form-select form-input" name="guestCount" required>
+                  <option value="">Select range</option>
+                  <option>Less than 50</option>
+                  <option>50 – 100</option>
+                  <option>100 – 200</option>
+                  <option>200 – 300</option>
+                  <option>300 – 500</option>
+                  <option>500+</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Approximate Budget *</label>
+              <select class="form-select form-input" name="budget" required>
+                <option value="">Select Budget Range</option>
+                <option>₹50,000 – ₹1,00,000</option>
+                <option>₹1,00,000 – ₹2,50,000</option>
+                <option>₹2,50,000 – ₹5,00,000</option>
+                <option>₹5,00,000 – ₹10,00,000</option>
+                <option>₹10,00,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Special Requests / Notes</label>
+              <textarea class="form-textarea form-input" name="specialRequests" placeholder="Tell us about your vision — theme, décor preferences, dietary requirements, special rituals..."></textarea>
+            </div>
+
+            <div class="form-section-title">Payment Method</div>
+            <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--text-light);font-style:italic;margin-bottom:1rem;">Choose your preferred payment method. A 20% advance secures your booking.</p>
+
+            <div class="payment-options">
+              <div class="payment-option selected">
+                <div class="payment-option-icon">🏦</div>
+                <div class="payment-option-label">Bank Transfer (NEFT/RTGS)</div>
+              </div>
+              <div class="payment-option">
+                <div class="payment-option-icon">📱</div>
+                <div class="payment-option-label">UPI / GPay / PhonePe</div>
+              </div>
+              <div class="payment-option">
+                <div class="payment-option-icon">💳</div>
+                <div class="payment-option-label">Credit / Debit Card</div>
+              </div>
+              <div class="payment-option">
+                <div class="payment-option-icon">💰</div>
+                <div class="payment-option-label">Cash on Visit</div>
+              </div>
+            </div>
+
+            <!-- Razorpay placeholder note -->
+            <div style="background:rgba(200,150,42,0.05);border:1px solid rgba(200,150,42,0.2);padding:1.25rem;margin:1.5rem 0;border-radius:2px;">
+              <p style="font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.1em;color:var(--text-light);">🔒 <strong style="color:var(--gold);">Secure Payment</strong> — Your booking details are encrypted and safe. Online payment via Razorpay will be activated after confirmation by our team.</p>
+            </div>
+
+            <div style="display:flex;gap:1rem;align-items:center;margin-bottom:1.5rem;">
+              <input type="checkbox" id="agree-terms" required style="width:16px;height:16px;accent-color:var(--gold);" />
+              <label for="agree-terms" style="font-family:var(--font-body);font-size:0.9rem;color:var(--text-mid);font-style:italic;cursor:pointer;">
+                I agree to the <a href="#" style="color:var(--gold);">Terms & Conditions</a> and <a href="#" style="color:var(--gold);">Cancellation Policy</a>
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width:100%;display:block;text-align:center;padding:1.2rem;font-size:0.85rem;">
+              ✦ Confirm Booking
+            </button>
+
+            <p style="font-family:var(--font-body);font-size:0.85rem;color:var(--text-light);font-style:italic;text-align:center;margin-top:1rem;">
+              We'll contact you within 24 hours to confirm your booking and discuss next steps.
+            </p>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING SUCCESS POPUP -->
+  <div class="popup-overlay" id="booking-success-popup">
+    <div class="popup-box">
+      <div class="popup-close" id="close-success-popup">✕</div>
+      <div class="popup-icon">🎊</div>
+      <h2 class="popup-title">Booking Confirmed!</h2>
+      <p class="popup-msg">
+        Congratulations! Your booking with <strong>SHAGUN Wedding Planners</strong> has been received. Our team will reach out within 24 hours to discuss your celebration in detail.<br><br>
+        <em>May your day be as beautiful as your love story. 💐</em>
+      </p>
+      <a href="dashboard.html" class="btn-primary" style="display:inline-block;" onclick="document.getElementById('booking-success-popup').classList.remove('open');document.body.style.overflow='';">View My Dashboard</a>
+    </div>
+  </div>
+
+  <footer class="footer" style="padding:3rem 0 2rem;">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2024 SHAGUN Wedding Planners, Ajmer. All rights reserved.</p>
+        <p>Crafted with ❤️ in Rajasthan</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919829000000" class="whatsapp-btn" target="_blank">💬</a>
+  <script src="script.js"></script>
+</body>
+</html>
